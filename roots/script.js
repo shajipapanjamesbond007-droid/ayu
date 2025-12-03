@@ -4,8 +4,7 @@ const passwordInput = document.getElementById("password-input");
 const passwordError = document.getElementById("password-error");
 
 passwordBtn.addEventListener("click", () => {
-  const password = passwordInput.value.trim();
-  if (password === "1@2") {
+  if (passwordInput.value.trim() === "1@2") {
     document.getElementById("password-screen").classList.add("hidden");
     document.getElementById("main-content").classList.remove("hidden");
     startCakeCountdown();
@@ -18,8 +17,8 @@ passwordBtn.addEventListener("click", () => {
 function startCakeCountdown() {
   const cakeSection = document.getElementById("cake-section");
   cakeSection.classList.remove("hidden");
-  const countdownEl = document.getElementById("countdown");
   let count = 3;
+  const countdownEl = document.getElementById("countdown");
 
   const interval = setInterval(() => {
     countdownEl.textContent = count;
@@ -44,11 +43,8 @@ function startBalloons() {
     balloon.addEventListener("click", () => {
       balloon.style.visibility = "hidden";
       messageEl.textContent = `You popped balloon ${index + 1}! 🎉`;
-      confetti({
-        particleCount: 50,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
+      confetti({ particleCount: 50, spread: 70, origin: { y: 0.6 } });
+
       if ([...balloons].every(b => b.style.visibility === "hidden")) {
         balloonSection.classList.add("hidden");
         document.getElementById("card-section").classList.remove("hidden");
@@ -70,7 +66,7 @@ document.getElementById("again-btn").addEventListener("click", () => {
   song.play();
 });
 
-// Optional: slideshow logic (can be extended)
+// Slideshow
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -81,9 +77,7 @@ function showSlide(index) {
   });
 }
 
-// Example: change slides every 3s
 setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
 }, 3000);
-
