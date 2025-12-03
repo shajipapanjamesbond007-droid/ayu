@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Surprise 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+
+
+  <!-- PASSWORD GATE -->
+  <div id="password-screen" class="screen">
+    <h2>Enter Password to Continue 🎉</h2>
+    <p>
+  <strong>Hint:1@2</strong><br><br>
+  1) Fav person in Canada <br><br>
+  2) Why are we celebrating today?
+</p>
+
+    <input type="password" id="password-input" placeholder="Enter password">
+    <button id="password-btn">Submit</button>
+    <p id="password-error"></p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content" class="hidden container">
+
+    <!-- CAKE ANIMATION -->
+    <div id="cake-section">
+      <img src="assets/cake.gif" alt="Birthday Cake" id="cake">
+      <div id="countdown">3</div>
+    </div>
+
+    <!-- BALLOONS -->
+    <div id="balloon-section" class="hidden">
+      <h2>Pop the balloons to reveal your message!</h2>
+      <div class="balloons">
+        <img src="assets/balloon1.png" alt="Balloon 1" class="balloon">
+        <img src="assets/balloon2.png" alt="Balloon 2" class="balloon">
+        <img src="assets/balloon3.png" alt="Balloon 3" class="balloon">
+        <img src="assets/balloon4.png" alt="Balloon 4" class="balloon">
+      </div>
+      <p id="balloon-message"></p>
+    </div>
+
+    <!-- BIRTHDAY CARD -->
+    <div id="card-section" class="hidden">
+      <h2>🎂 Birthday Card 🎂</h2>
+      <p>Add your personal message here!</p>
+      <button id="next-phase-btn">Next Phase</button>
+    </div>
+
+    <!-- SING-ALONG -->
+    <div id="sing-along-section" class="hidden">
+      <h2>Sing with me! 🎵</h2>
+      <div id="lyrics">
+        <p>Line 1 of song</p>
+        <p>Line 2 of song</p>
+        <p>Line 3 of song</p>
+      </div>
+      <button id="again-btn">Again</button>
+      <audio id="song" src="assets/song.mp3"></audio>
+    </div>
+
+    <!-- PHOTO SLIDESHOW -->
+    <div id="slideshow-section" class="hidden">
+      <h2>Memories!</h2>
+      <img src="assets/photos/photo1.jpg" class="slide" alt="Photo 1">
+      <img src="assets/photos/photo2.jpg" class="slide hidden" alt="Photo 2">
+      <img src="assets/photos/photo3.jpg" class="slide hidden" alt="Photo 3">
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
 
